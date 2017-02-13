@@ -1,0 +1,29 @@
+* {
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  color:#000;
+}
+body {
+  font-size:12px;
+  font-family:Arial,Verdana,Tahoma,"Î¢ÈíÑÅºÚ","ºÚÌå";
+  line-height:120%;
+  background:#fff;
+  margin:0;
+  overflow-x:hidden;
+}
+p,h1,h2,h3,h4,h5,h6,ul,ol,dl,li,form,table {
+  margin:0;
+  padding:0;
+}
+a,img {
+  border:none;
+}
+li {
+  list-style:none;
+}
+a {
+  text-decoration:none;
+  color:#000000;
+  border:0;
+}

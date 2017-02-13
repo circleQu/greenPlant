@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  color: #000;;
+}
+body {
+  font-size: 12px;
+  font-family: Arial,Verdana,Tahoma,"΢���ź�","����";
+  line-height: 120%;
+  background: #fff;
+  margin: 0;
+  overflow-x: hidden;;
+}
+p, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, form, table {
+  margin: 0;
+  padding: 0;;
+}
+a, img {
+  border: none;;
+}
+li {
+  list-style: none;;
+}
+a {
+  text-decoration: none;
+  color: #000000;
+  border: 0;;
+}
+header {
+  height: 1.2rem;
+  display: -webkit-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align :center;
+  -webkit-align-items :center;
+      -ms-flex-align :center;
+          align-items :center;;
+}
+header p{
+  font-size: 0.6rem;
+  font-weight: 800;
+  color:#324c5f;;
+}
+footer{
+  width: 100%;
+  height: 1rem;
+  display: -webkit-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align :center;
+  -webkit-align-items :center;
+      -ms-flex-align :center;
+          align-items :center;
+  position: absolute;
+  bottom: 0;;
+}
+footer #f_plant, footer #f_book, footer #f_communion {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: center;
+  font-size: 0.2rem;;
+}
+footer #f_plant p, footer #f_book p, footer #f_communion p{
+  color:#324c5f;;
+}
+body{
+  background:url('../img/top6.png') 0rem 0rem;
+}
+section{
+  z-index: 1;
+  padding-left: 0.5rem;
+  width: 88%;
+  position: absolute;
+  bottom: 1rem;
+  top: 1.2rem;
+}
+section .temperature{
+  font-size: 1.2rem;
+  position: relative;
+  top: 0.7rem;;
+}
+section .temperature .unit{
+  position: absolute;
+  top: -0.3rem;
+  left: 1.3rem;
+  color:#324c5f;;
+}
+section .temperature .num{
+  color:#324c5f;;
+}
+section .temperature .c{
+  font-size: 0.8rem;
+  position: absolute;
+  left: 1.6rem;
+  color:#324c5f;;
+}
+section .temperature .btn{
+  position: absolute;
+  top: -0.4rem;
+  right: 0.2rem;
+  width: 1.6rem;
+  z-index: 11111;
+  padding: 0;;
+}
+section .content{
+  padding-top: 0.3rem;
+  padding-bottom: 3.2rem;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: #666 0px 0px 10px;
+          box-shadow: #666 0px 0px 10px;
+  margin: 1.2rem 0.2rem 0.1rem 0.2rem;
+  text-align: center;;
+}
+section .content .p_name{
+  font-size: 0.4rem;
+  color:#324c5f;;
+}
+section .content img{
+  width: 4.7rem;
+  height: 5rem;
+  vertical-align: middle;
+  margin-top: 0.2rem;;
+}
+section .content .data_word, section .content .data_num{
+  display: inline-block;
+  width: 83%;
+  padding-top: 8rem;
+  padding-left: 1rem;;
+}
+section .content .data_word li{
+  display: -webkit-flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align :center;
+  -webkit-align-items :center;
+      -ms-flex-align :center;
+          align-items :center;
+  font-size: 0.3rem;
+  line-height: 0.5rem;
+  color:#324c5f;;
+}
+section .content .data_word li img{
+  padding: 0;
+  margin: 0;
+  width: 0.3rem;
+  height: 0.3rem;;
+}
+section .content .data_num li{
+  display: -webkit-flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align :center;
+  -webkit-align-items :center;
+      -ms-flex-align :center;
+          align-items :center;
+  font-size: 0.3rem;
+  line-height: 0.5rem;
+  color:#324c5f;;
+}
+.main_visual{width:100%;height: 100%;border-top:1px solid #d7d7d7;overflow:hidden;position:absolute;z-index: 111;}
+.main_image{width:100%;height: 100%;overflow:hidden;position:absolute;}
+.main_image ul{overflow:hidden;position:absolute;top:0;left:0}
+.main_image li{float:left;width:100%;}
+.main_image li span{display:block;width:100%;}
+.main_image li a{display:block;width:100%;}
+
+div.flicking_con{position:absolute;bottom: 0.1rem;left: 3rem;text-align: center;z-index:999;width:300px;height:21px;margin:0 0 0 -50px;}
+div.flicking_con a{float:left;width:21px;height:21px;margin:0;padding:0;background:url('../img/btn_main1_img.png') 0 0 no-repeat;display:block;text-indent:-1000px}
+div.flicking_con a.on{background-position:0 -21px;}

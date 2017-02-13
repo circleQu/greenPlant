@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html id="html">
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" type="text/css" href="../css/progress.css">
+    <link href="../css/button.css" rel="stylesheet">
+</head>
+<body>
+<div class="demo">
+    <p class="line"></p>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-3 col-md-6">
+                <div class="progress_bar">
+                    <div class="pro-bar">
+                        <div class="progress_bar_title_sun">
+                            <img src="../img/p_sun.png">&nbsp;&nbsp;光照
+                            <p>5LX</p>
+                        </div>
+                        <span class="progress-bar-inner" id="sun" style="background-color: #0088c3;"  data-value="5LX"></span><!--假设最大光照量为10LX，为100%-->
+                    </div>
+                </div>
+
+                <div class="progress_bar">
+                    <div class="pro-bar">
+                        <div class="progress_bar_title_soil">
+                            <img src="../img/p_soil.png">&nbsp;&nbsp;土壤温湿度
+                            <p>2</p>
+                        </div>
+                        <span class="progress-bar-inner" id="soil" style="background-color: #fdba04;" data-value="1"></span><!--假设最大土壤温湿度为10，为100%-->
+                    </div>
+                </div>
+
+                <div class="progress_bar">
+                    <div class="pro-bar">
+                        <div class="progress_bar_title_air">
+                            <img src="../img/p_air.png">&nbsp;&nbsp;空气湿度
+                            <p>2</p>
+                        </div>
+                        <span class="progress-bar-inner" id="air" style="background-color: #049dff;" data-value="1"></span><!--假设最大土壤温湿度为10，为100%-->
+                    </div>
+                </div>
+
+                <div class="progress_bar">
+                    <div class="pro-bar">
+                        <div class="progress_bar_title_water">
+                            <img src="../img/p_water.png">&nbsp;&nbsp;水量
+                            <p>800ML</p>
+                        </div>
+                        <span class="progress-bar-inner" id="water" style="background-color: #ed687c;" data-value="800ML"></span><!--假设最大水量为1000ML-->
+                    </div>
+                </div>
+
+                <div class="progress_bar">
+                    <div class="pro-bar">
+                        <div class="progress_bar_title_tem">
+                            <img src="../img/p_t.png">&nbsp;&nbsp;温度
+                            <p>25度</p>
+                        </div>
+                        <span class="progress-bar-inner" id="tem" style="background-color: #5246e2;" data-value="35"></span><!--假设最高温度为35-->
+                    </div>
+                </div>
+
+                <div class="progress_bar">
+                    <div class="pro-bar">
+                        <div class="progress_bar_title_health">
+                            <img src="../img/p_h.png">&nbsp;&nbsp;健康度
+                            <p>50+</p>
+                        </div>
+                        <span class="progress-bar-inner" id="health" style="background-color: #e8630c;" data-value="50+"></span><!--假设最健康度为100+-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="../html/index.html" class="button button-glow button-rounded button-royal" style="width: 15%;height: 0.5rem;position: absolute;top: 0.2rem;padding:0;margin: 0;line-height: 0.5rem;color: #000000;background-color: #ffffff; opacity: 0.8;">
+        返回
+    </a>
+</div>
+    <script src="../js/jquery-1.9.1.min.js"></script>
+    <script>
+        //全局字体rem与px的设置
+    window.onload = function(){
+        fontSelf();
+    };
+    window.onresize = function () {
+        fontSelf();
+    };
+    function fontSelf() {
+        var wHtml = document.getElementById('html');
+        var w = document.documentElement.clientWidth;
+        w =  w > 768 ? 768 : document.documentElement.clientWidth;
+        wHtml.style.fontSize = w * 0.13 + 'px';
+    }
+
+        $(function(){
+            var progress = $(".progress-bar-inner");
+            progress.each(function (i)
+            {
+                var data = $(this).attr('data-value');
+                $(this).prev().find("span").html(data+"");
+            });
+        });
+
+    </script>
+<script src="../js/progress.js"></script>
+</body>
+</html>
+
