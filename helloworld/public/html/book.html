@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html id="html">
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>宝典</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="../css/book.css" rel="stylesheet">
+    <link href="../css/reset.css" rel="stylesheet">
+    <link href="../css/pullToRefresh.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <p>宝&nbsp;&nbsp;典</p>
+    </header>
+    <section>
+        <div id="wrapper">
+            <ul id="list">
+                <li class="item">
+                    <img src="../img/lvluo.jpg"/>
+                    <div class="flower_name">绿萝<br/><span class="flower_language">守望幸福、坚韧善良</span></div>
+                </li>
+                <li class="item">
+                    <img src="../img/chuju.jpg"/>
+                    <div class="flower_name">雏菊<br/><span class="flower_language">天真、和平、希望、纯洁的美以及深藏在心底的爱</span></div>
+                </li>
+                <li class="item">
+                    <img src="../img/guanyinzhu.jpg"/>
+                    <div class="flower_name">观音竹<br/><span class="flower_language">辟邪、节节高升、平安</span></div>
+                </li>
+                <li class="item">
+                    <img id="a" src="../img/ziluolan.jpg"/>
+                    <div class="flower_name">紫罗兰<br/><span class="flower_language">永恒的美与爱，质朴、美德、盛夏的清凉</span></div>
+                </li>
+                <li class="item">
+                    <img src="../img/jiwalian.jpg"/>
+                    <div class="flower_name">吉娃莲<br/><span class="flower_language">纯真简朴 青春长驻</span></div>
+                </li>
+                <li class="item">
+                    <img src="../img/meigui.jpg"/>
+                    <div class="flower_name">玫瑰<br/><span class="flower_language">爱情、爱与美、容光焕发，勇敢</span></div>
+                </li>
+                <li class="item">
+                    <img src="../img/baihe.jpg"/>
+                    <div class="flower_name">白百合<br/><span class="flower_language">纯洁、庄严、心心相印</span></div>
+                </li>
+                <li class="item">
+                    <img src="../img/kangnaixin.jpg"/>
+                    <div class="flower_name">康乃馨<br/><span class="flower_language">谢谢你的爱</span></div>
+                </li>
+                <li class="item">
+                    <img src="../img/wenzhu.jpg"/>
+                    <div class="flower_name">文竹<br/><span class="flower_language">永恒</span></div>
+                </li>
+                <li class="item">
+                    <img src="../img/qilixiang.jpg"/>
+                    <div class="flower_name">七里香<br/><span class="flower_language">我是你的俘虏以及反战之殇</span></div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <div id="f_plant">
+            <img style="width: 0.5rem;height: 0.5rem;" src="../img/zhiwu_w%20(1).png"/>
+            <p>植物</p>
+        </div>
+        <div id="f_book">
+            <img style="width: 0.5rem;height: 0.5rem;" src="../img/baodian_g.png"/>
+            <p style="color: #0e932e">宝典</p>
+        </div>
+        <div id="f_communion">
+            <img style="width: 0.5rem;height: 0.5rem;" src="../img/shequ_w%20(1).png"/>
+            <p>社区</p>
+        </div>
+    </footer>
+    <script src="../js/jquery-1.9.1.min.js"></script>
+    <script src="../js/iscroll.js"></script>
+    <script src="../js/pullToRefresh.js"></script>
+    <script src="../js/book.js"></script>
+    <script>
+        //全局字体rem与px的设置
+        window.onload = function(){
+            fontSelf();
+        };
+        window.onresize = function () {
+            fontSelf();
+        };
+        function fontSelf() {
+            var wHtml = document.getElementById('html');
+            var w = document.documentElement.clientWidth;
+            w =  w > 768 ? 768 : document.documentElement.clientWidth;
+            wHtml.style.fontSize = w * 0.13 + 'px';
+        }
+
+        refresher.init({
+            id:"wrapper",
+            pullDownAction:Refresh,
+            pullUpAction:Load
+        });
+        function Refresh() {
+            setTimeout(function () {	// <-- Simulate network congestion, remove setTimeout from production!
+                var el, li, i;
+                el =document.querySelector("#wrapper ul");
+                //这里写你的刷新代码
+                document.getElementById("wrapper").querySelector(".pullDownIcon").style.display="none";
+                document.getElementById("wrapper").querySelector(".pullDownLabel").innerHTML="<img src='../img/ok.png'/>刷新成功";
+                setTimeout(function () {
+                    wrapper.refresh();
+                    document.getElementById("wrapper").querySelector(".pullDownLabel").innerHTML="";
+                },1000);//模拟qq下拉刷新显示成功效果
+                /****remember to refresh after  action completed！ ---yourId.refresh(); ----| ****/
+            }, 1000);
+        }
+        function Load() {  //下拉要加载的代码
+            setTimeout(function () {
+                // <-- Simulate network congestion, remove setTimeout from production!
+                //var  i
+                //el = document.querySelector(".scroller>ul>li");
+                //li = document.createElement('li');
+                //$(".active").clone().appendTo($(".scroller>ul"));
+                // $(".scroller>ul>li").appendTo($(".scroller>ul"));
+                $(".item").eq(0).clone().appendTo($(".scroller>ul"));
+                $(".item").eq(1).clone().appendTo($(".scroller>ul"));
+                $(".item").eq(2).clone().appendTo($(".scroller>ul"));
+                $('.item').click(function () {
+                    $(this).css({'background-color':'#FFFF88','opacity':'1'});
+                    window.location.href="../html/data.html";
+                });
+                wrapper.refresh();/****remember to refresh after action completed！！！   ---id.refresh(); --- ****/
+            }, 1000);
+        }
+
+
+    </script>
+</body>
+</html>

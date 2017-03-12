@@ -1,0 +1,42 @@
+{
+  "name": "nihao",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.2",
+    "chokidar": "^1.6.1",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-concat": "^2.6.1",
+    "gulp-html-replace": "^1.6.2",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rev": "^7.1.2",
+    "gulp-rev-collector": "^1.0.5",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0",
+    "node-sass": "^3.13.0",
+    "run-sequence": "^1.2.2"
+  },
+  "dependencies": {
+    "autoprefixer": "^6.5.3",
+    "gulp-postcss": "^6.2.0",
+    "koa": "^1.2.4",
+    "koa-body": "^1.6.0",
+    "koa-cors": "0.0.16",
+    "koa-router": "^5.4.0",
+    "postcss-inline-comment": "^3.0.0",
+    "postcss-sassy-mixins": "^2.0.0",
+    "postcss-scss": "^0.4.0",
+    "postcss-simple-extend": "^1.0.0",
+    "postcss-strip-inline-comments": "^0.1.5",
+    "precss": "^1.4.0"
+  },
+  "description": ""
+}

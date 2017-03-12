@@ -1,0 +1,57 @@
+body{
+  padding: 0;
+  margin: 0;
+}
+header{
+  height: 0.5rem;
+  width: 100%;
+  display: -webkit-flex;
+  align-items :center;
+  position: fixed;
+  background-color: #FFFFFF;
+  padding: 0.3rem;
+  .line{
+      border-top: 0.01rem #DDDDDD solid;
+      position: absolute;
+      top: -0.01rem;
+      width: 85%;
+  }
+}
+section{
+  padding: 1rem 0.3rem;
+  .top{
+    display: -webkit-flex;
+    align-items :center;
+    margin: 0.5rem 0.2rem 0.2rem;
+    img {
+      margin-bottom: 0.1rem;
+    }
+    .flower_name{
+        padding-left: 0.5rem;
+        font-size: 0.4rem;
+        line-height: 0.4rem;
+        .flower_language{
+          font-size: smaller;
+        }
+      }
+    }
+  .content{
+    font-size: 0.35rem;
+    padding: 0.2rem;
+    table{
+      tr{
+        td:first-child{
+          color: #494A5F;
+        }
+      }
+    }
+    .yanghu{
+      text-align: left;
+    }
+  }
+  .bottom{
+    padding: 0.2rem;
+    font-size: 0.32rem;
+    line-height: 0.6rem;
+  }
+}
